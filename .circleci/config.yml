@@ -3,10 +3,10 @@ version: 2.1
 workflows:
   show-env-vars:
     jobs:
-      - show
+      - show-env
 
 jobs:
-  show:
+  show-env:
     docker:
       - image: cimg/base:2020.01
     steps:
