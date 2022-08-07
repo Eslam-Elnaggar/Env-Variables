@@ -16,5 +16,4 @@ jobs:
       - image: cimg/base:2020.01
     steps:
       - checkout
-      - run:
-          print_pipeline_id
+      - print_pipeline_id
