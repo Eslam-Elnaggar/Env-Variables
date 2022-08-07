@@ -3,7 +3,7 @@ version: 2.1
 commands: 
   print_pipeline_id:
     steps:
-      -run: echo ${CIRCLE_WORKFLOW_ID}
+      - run: echo ${CIRCLE_WORKFLOW_ID}
 
 workflows:
   test-commands:
@@ -15,4 +15,6 @@ jobs:
     docker:
       - image: cimg/base:2020.01
     steps:
-      - print_pipeline_id
+      - checkout
+      - run:
+          print_pipeline_id
